@@ -1,8 +1,17 @@
 import React from 'react'
+
+import { useNavigate } from "react-router-dom";
+
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 
 const SinglePlace = (props) => {
     console.log(props);
+    let navigate=useNavigate();
+
+    const bookPlaceTicket = () => {
+      navigate("/place/book",{state:{placeId:props.place.placeId}})
+    }
+
   return (
     <Col>
      
@@ -14,7 +23,7 @@ const SinglePlace = (props) => {
      <Col xs={8} md={8}>
      <Card.Title>{props.place.placeName}</Card.Title>
      <Card.Text>{props.place.placeDescription}</Card.Text>
-     <Button>Booking</Button>
+     <Button onClick={bookPlaceTicket}>Book</Button>
      </Col>
 
      </Row>
