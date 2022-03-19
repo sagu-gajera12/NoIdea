@@ -22,7 +22,7 @@ const Home = () => {
 
   return <div>
     <SimpleImageSlider
-        width={1700}
+        width={window.innerWidth}
         height={700}
         images={images}
         showBullets={true}

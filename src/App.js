@@ -5,17 +5,37 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Components/Home';
 import Places from './Components/Places';
+import BookTicket from './Components/BookTicket';
+import Login from './Components/Login';
+import BookingReview from './Components/BookingReview';
+import { useState } from 'react';
+import SuccessFull from './Components/BookSuccess';
+import BookSuccess from './Components/BookSuccess';
+import MyOrder from './Components/MyOrder';
 function App() {
+
+  const[token,setToken]=useState();
+
+  const setTokens=(t)=>{
+      setToken(t);
+  }
+
+  
+
   return (
     <div className="App">
     <Router>
-    <Header></Header>
+    <Header token={token} setToken={setTokens}></Header>
     <Routes>
       
          <Route path='/home' element={<Home></Home>}></Route>
          <Route path='/places' element={<Places></Places>}></Route>
-         {/* <Route path='/booktickes' element={}></Route>
-         <Route path='/touristattractions' element={}></Route>
+          <Route path='/bookticket' element={<BookTicket setToken={setTokens} ></BookTicket>}></Route>
+          <Route path='/login' element={<Login setToken={setTokens}></Login>}></Route>
+          <Route path='/bookingreview' element={<BookingReview></BookingReview>}></Route>
+          <Route path='/place/booksuccess' element={<BookSuccess></BookSuccess>}></Route>
+          <Route path='/myorder' element={<MyOrder></MyOrder>}></Route>
+         {/*<Route path='/touristattractions' element={}></Route>
          <Route path='/howtoreach' element={}></Route> */}
 
     </Routes>

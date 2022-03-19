@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({token,setToken}) => {
+
+  useEffect(()=>{
+    if(localStorage.getItem('token')!=null)
+    {
+           setToken(localStorage.getItem('token'));
+    }
+  })
+
+
   return (
     <div>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,7 +26,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" style={{}} to="/bookticket" >
+              <Link className="nav-link" style={{}} to="/places" >
               Book Ticket
               </Link>
             </li>
@@ -31,6 +40,16 @@ const Header = () => {
               How To Reach
               </Link>
             </li>
+          {token==null && <li className="nav-item">
+            <Link className="nav-link" style={{}} to="/login" >
+            Login
+            </Link>
+          </li>}
+          {token!=null && <li className="nav-item">
+            <Link className="nav-link" style={{}} to="/myorder" >
+            My Order
+            </Link>
+          </li>}
           </ul>
         </div>
       </div>

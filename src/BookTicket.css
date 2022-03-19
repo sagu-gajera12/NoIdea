@@ -1,0 +1,220 @@
+.container {
+    width: 700px;
+    max-width: 100%;
+    margin: 80px auto 50px auto ;
+    padding: 0 18px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+  .input-row {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid gray;
+  }
+  .input-row:last-child {
+    border-bottom: 0;
+  }
+  .label {
+    font-weight: bold;
+  }
+  .description {
+    color: gray;
+  }
+  .input {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  
+  button:active {
+    background-color: whitesmoke;
+  }
+
+  .circle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .circle-button:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+  }
+  .circle-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .number {
+    font-size: 25px;
+    min-width: 50px;
+    text-align: center;
+  }
+  .icon {
+    user-select: none;
+  }
+  .dim {
+    color: gray;
+  }
+  #ChildValue{
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 30%;
+    padding-left: 100%;
+    color: #89aa02;
+  }
+  #AdultValue{
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 30%;
+    padding-left: 60%;
+    color: #89aa02;
+  }
+  
+
+  
+  .calendar {
+    padding:8px;
+    background: #ffffff;
+    border-radius: 4px;
+    font-size:18px;
+    border: 1px solid #333333;
+    box-shadow: 0px 20px 40px rgba(59,60,56,0.05);
+  }
+  .ui-datepicker {
+    background: #ffffff;
+    border-radius: 15px;
+  }
+  .ui-datepicker-header {
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    background: #89aa02;
+    margin-bottom: 10px;
+  }
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    width: 20px;
+    height: 20px;
+    text-indent: 9999px;
+    border-radius: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+  .ui-datepicker-prev {
+    float: left;
+    margin-left: 12px;
+  }
+  .ui-datepicker-prev:after {
+    transform: rotate(45deg);
+    margin: -43px 0px 0px 8px;
+  }
+  .ui-datepicker-next {
+    float: right;
+    margin-right: 12px;
+  }
+  .ui-datepicker-next:after {
+    transform: rotate(-135deg);
+    margin: -43px 0px 0px 6px;
+  }
+  .ui-datepicker-prev:after,
+  .ui-datepicker-next:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  .ui-datepicker-prev:hover,
+    .ui-datepicker-next:hover,
+    .ui-datepicker-prev:hover:after,
+    .ui-datepicker-next:hover:after {
+      border-color: #333333;
+    }
+    .ui-datepicker-title {
+      text-align: center;
+      font-size:25px;
+    }
+    .ui-datepicker-calendar {
+      width: 100%;
+      text-align: center;
+    }
+    .ui-datepicker-calendar thead tr th span {
+      display: block;
+      width: 40px;
+      color: #89aa02;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+    .ui-state-default {
+      display: block;
+      text-decoration: none;
+      color: #333333;
+      line-height: 40px;
+      font-size: 16px;
+    }
+    .ui-state-default:hover {
+      color: #ffffff;
+      background:#89aa02;
+      border-radius:50px;
+      transition: all 0.25s cubic-bezier(0.7, -0.12, 0.2, 1.12);
+    }
+    .ui-state-highlight {
+      color: #ffffff;
+      background-color:#89aa02;
+      border-radius:50px;
+    }
+    
+    .ui-state-active {
+      color: #ffffff;
+      background-color:#89aa02;
+      border-radius:50px;
+    }
+    .ui-datepicker-unselectable .ui-state-default {
+      color: #eee;
+      border: 2px solid transparent;
+    }
+    
+    .icon {
+        margin-left: -30px;
+        margin-top: -26px;
+        position: relative;
+        color: #89aa02;
+        font-size:20px;
+    }
+    #total{
+      font-size:20px;
+      font-weight: bold;
+    }
+  #placeName{
+   text-align: center; 
+  }
+  #BookNow{
+      width: 100px;
+  }
+  .bookbutton {
+      height: 40px;
+      width: 100px;
+      font-size: 15px;
+      background-color: #89aa02;
+      padding: 5px;
+      top: 3px;
+      right: 3px;
+      color: white;
+      border-radius: 10px;
+    }
+    .bookbutton:hover
+    {
+        color: black;
+    }
