@@ -85,7 +85,7 @@ const BookTicket = (props) => {
     setPrice(temp * place.priceAdult + child * place.priceChild);
   };
   const [price, setPrice] = useState(0);
-  const [date, setDate] = useState();
+  const [date, setDate] = useState(moment(new Date()).format("DD-MM-YYYY"));
   const placeOrder = () => {
     let token = localStorage.getItem("token");
     if (token == null) {
@@ -97,6 +97,8 @@ const BookTicket = (props) => {
         childQnt: child,
         visitDate: date,
       };
+
+      console.log(orders)
 
       axios.post(`${BaseUrl}/secure/order`, orders).then(
         (response) => {
@@ -185,11 +187,11 @@ const BookTicket = (props) => {
               type="date"
               name="checkIn"
               id="datepicker"
-              defaultValue
+              defaultValue = {moment(new Date()).format("DD-MM-YYYY")}
               min={moment(new Date()).format("YYYY-MM-DD")}
               className="calendar"
               onChange={(e) => {
-                setDate(e.target.value);
+                setDate(moment(e.target.value).format("DD-MM-YYYY"));
               }}
             />
             <i className="fas fa-calendar-check icon" />
