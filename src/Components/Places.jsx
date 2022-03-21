@@ -26,6 +26,11 @@ const Places = () => {
   const [curCity,setCity] = useState("");
 
    useEffect(() => {
+    plaeObj = {
+      stateName : "",
+      cityName : "",
+      placeName : ""
+    };
     for(let i = 0; i < states.length; i++){
       const items = {value : states[i],label : states[i]};
       statesss.push(items)

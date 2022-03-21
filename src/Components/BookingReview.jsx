@@ -120,7 +120,7 @@ const BookingReview = (props) => {
     );
     console.log(bookConfirm);
     axios
-      .post(`${BaseUrl}/secure/confirm`, JSON.stringify(bookConfirm), {
+      .post(`${BaseUrl}/secure/confirm`, JSON.stringify(intial), {
         headers: {
           "Content-Type": "application/json",
         },

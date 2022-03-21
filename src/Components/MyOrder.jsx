@@ -44,12 +44,14 @@ const MyOrder = () => {
         <table className="table table table-hover">
           <thead>
             <tr>
+              <th>Index</th>
               <th>OrderId#</th>
               <th>PaymentID</th>
               <th>Place</th>
               <th>Visit Date</th>
               <th>Visitors Count</th>
               <th>Total Amount</th>
+              <th>Completed</th>
               <th>Payment Receipt</th>
               <th>Cancel Payment</th>
             </tr>
@@ -58,7 +60,7 @@ const MyOrder = () => {
 
 {  ordersDetails.map((order,index)=>{
 
-  return <SingleOrder order={order}></SingleOrder>
+  return <SingleOrder order={order} index = {index}></SingleOrder>
 })              }
 
           </tbody>
