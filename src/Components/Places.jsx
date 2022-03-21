@@ -31,12 +31,16 @@ const Places = () => {
       cityName : "",
       placeName : ""
     };
+
+    const nochoce = {value : "" , label : "No Choice"};
+    
+    if(!statesss.includes(nochoce)) statesss.push(nochoce);
+
     for(let i = 0; i < states.length; i++){
       const items = {value : states[i],label : states[i]};
       statesss.push(items)
     }
-    const nochoce = {value : "" , label : "No Choice"};
-    statesss.push(nochoce);
+    
     setStates(statesss);
     getData()
     
@@ -57,9 +61,8 @@ const Places = () => {
     setFilter({...filter,stateName:value.value});
     plaeObj.stateName = value.value;
     getData()
-    // const nochoce = {value : "" , label : "No Choice"};
-    // cities.push(nochoce)
     console.log(cities);
+    cities.push({value : "",label : "No Choice"})
     if(value.value != ""){
       axios.get(`${BaseUrl}/place/states/${value.value}`).then(
         (response) => {
