@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import '../MyOrder.css'
+import BaseUrl from './BaseUrl';
+import SingleCancelOrder from './SingleCancelOrder';
 import SingleOrder from './SingleOrder';
-import BaseUrl from "./BaseUrl"
 
-const MyOrder = () => {
-  const [ordersDetails,setOrderDetails] = useState([]);
+const MyCancel = () => {
+
+    const [ordersDetails,setOrderDetails] = useState([]);
   useEffect(()=>{
 
 
@@ -21,7 +22,7 @@ const MyOrder = () => {
           return Promise.reject(error); 
         }
       );
-    axios.get(`${BaseUrl}/secure/myorders`).then(
+    axios.get(`${BaseUrl}/secure/mycancel`).then(
         (response) => {
             console.log(response.data.data);
             setOrderDetails(response.data.data)
@@ -36,31 +37,29 @@ const MyOrder = () => {
     
   },[])
 
-
   return (
-    <div className="container-xl">
+<div className="container-xl">
     <div className="table-responsive">
       <div className="table-wrapper">
         <table className="table table table-hover">
           <thead>
             <tr>
-            <th>Index</th>
-              <th>OrderId#</th>
-              <th>PaymentID</th>
-              <th>Place</th>
-              <th>Visit Date</th>
-              <th>Visitors Count</th>
-              <th>Total Amount</th>
-              <th>Completed</th>
-              <th>Payment Receipt</th>
-              <th>Cancel Payment</th>
+               <th>Cancel Id</th>
+               <th>Booking Id</th>
+              <th>Refund Mode</th>
+              <th>Account No/ UPI ID</th>
+              <th>adult Qnt</th>
+              <th>child Qnt</th>
+              <th>Cancellation Charges</th>
+              <th>Refund Amount</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
 
 {  ordersDetails.map((order,index)=>{
 
-  return <SingleOrder order={order} index={index}></SingleOrder>
+  return <SingleCancelOrder order={order}></SingleCancelOrder>
 })              }
 
           </tbody>
@@ -68,8 +67,7 @@ const MyOrder = () => {
       </div>
     </div>
   </div>
-
   )
 }
 
-export default MyOrder
+export default MyCancel

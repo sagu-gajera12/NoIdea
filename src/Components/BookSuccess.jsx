@@ -26,40 +26,44 @@ const BookSuccess = () => {
 
   return (
 
-    <div style={{margin:'40px'}}><div className="container">
+    <div style={{margin:'40px',color:'black'}}><div className="bookcontainer">
     <div id="logo">
     </div>
-    <div className="main">
-      <h1>Payment Succesfull</h1>
-      <h2>Thank you for booking with us</h2>
-      <p>{drd.bookingDate} at {drd.bookingTime}</p>
+    <div className="bookmain" style={{margin:'0',}}>
+      <h1 className='bookh1' style={{background:'linear-gradient(to left,#ff8414,#ff613a)', color:'white' , paddingTop:'15px'}}>Payment Succesfull</h1>
+      <h2 className='bookh2'>Thank you for booking with us</h2>
+      <p style={{fontSize:'14px'}}>{drd.bookingDate} at {drd.bookingTime}</p>
     </div>
-    <div className="location">
-      <img className="map" src={qrd.qrUrl} />
-      <div className="dot pickup">
-        <div className="inner" />
-      </div>
-      <div className="location__pickup">
-        <h3>{prd.placeName}</h3>
-        <span>({prd.startTime} - {prd.endTime})</span>
+    <div style={{display:'flex', justifyContent:'space-around' ,alignItems:'center'}} className="">
+      
+      <div style={{textAlign:'left'}} className="">
+        <h2  className='bookh2'>{prd.placeName}</h2>
+        <h3 className='bookh3'>({prd.startTime} - {prd.endTime})</h3>
         <p>{prd.city} , {prd.state}</p>
       </div>
-    </div>
-    <h2 className="receipt__title">Booking Details</h2>
-    <div className="receipt">
-      <div className="receipt__grid1">
-        <p>Adults</p>
-        <p>Children</p>
-        <p className="total">Total</p>
-      </div>
-      <div className="receipt__grid2">
-        <p>{drd.adultQnt} X ₹{prd.priceAdult}</p>
-        <p>{drd.childQnt} X ₹{prd.priceChild}</p>
-        <p className="total">₹{drd.amount}</p>
+      <div>
+      <img className="map" src={qrd.qrUrl} />
       </div>
     </div>
-    <div className="receipt__line" />
-    <Button style={{marginBottom:'30px'}} onClick={window.print}>download</Button>
+
+    <div style={{margin:'30px', color:'black'}} className="">
+        <h2 className="receipt__title bookh2">Booking Details</h2>
+        <div className='receipt'>
+      <div  className="receipt__grid1 text-left">
+        <p className='bookp'>Adults</p>
+        <p className='bookp'>Children</p>
+        <hr></hr>
+        <p className="total bookp">Total</p>
+      </div>
+      <div className="receipt__grid2 text-center">
+        <p className='bookp'>{drd.adultQnt} X ₹{prd.priceAdult}</p>
+        <p className='bookp'>{drd.childQnt} X ₹{prd.priceChild}</p>
+        <hr></hr>
+        <p className="total bookp">₹{drd.amount}</p>
+      </div>
+      </div>
+    </div>
+    <Button style={{background:'#ff8414', border:'0px',fontSize:'20px', marginBottom:'30px'}} onClick={window.print}>Download</Button>
   </div></div>
   )
 }

@@ -1,0 +1,279 @@
+
+
+.number {
+	padding: .3em;
+	text-align: center;
+	display: inline-block;
+	width: .8em;
+	height: 1.8em;
+	background-color: whitesmoke;
+	border-radius: 50%;
+    margin-left: 10px
+}
+
+.cancel {
+	font-family: 'Life Savers', cursive;
+	text-align: center;
+	margin: .5em;
+	font-size: 1.5em;
+	text-shadow: 2px 2px 3px grey;
+
+}
+
+#cancelForm {
+	display: flex;
+	flex-direction: column;
+	background: rgb(204, 202, 204);
+	margin: 0 auto 2em;
+	border-radius: 1em;
+	padding: 0.5em 0;
+    width: 500px;
+}
+
+.inputField,
+#selectOption{
+	border: none;
+	padding: .5em .5em .5em .5em;
+	border-radius: .25em;
+    
+}
+
+#selectOption{
+    width: 49.75%;
+}
+
+.inputField:focus,
+.inputField:hover ,
+#selectOption{
+	background: white;
+	border-bottom: 2px solid grey;
+	outline: none;
+}
+
+
+fieldset {
+	border: none;
+	margin:.25em .5em .25em 3em;
+}
+
+legend {
+	font-family: 'Comfortaa', cursive;
+	font-size: 1.4em;
+	font-weight: bold;
+	padding-bottom: .5em;
+    margin-left: -2em;
+}
+
+label,
+.cancelOrder {
+	font-family: 'Baloo Chettan 2', cursive;
+}
+
+.cancelOrder {
+	box-shadow: 1px 1px 3px black;
+	border: none;
+	background-color: white;
+	font-size: 1em;
+	align-self: center;
+    padding: .7em;
+	color: black;
+    border-radius: 15px;
+}
+
+.cancelOrder:hover {
+	cursor: pointer;
+	background: rgb(245, 87, 87);;
+	color: black;
+	box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+#AccountNumber,
+#Code,
+#selectOption,
+#child,
+#adult{
+	margin: .5em 0;
+	box-shadow: 1px 1px 2px grey;
+}
+
+
+
+/* @media (min-width: 550px) {
+	#cancelForm {
+		max-width: 50%;
+	}
+} */
+
+
+#close {
+    overflow: hidden;
+    position: relative;
+    border: none;
+    padding: 0;
+    margin-left: 15px;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background: transparent;
+    color: black;
+    font: inherit;
+    text-indent: 100%;
+    cursor: pointer;
+  }
+  #close:focus {
+    outline: solid 0 transparent;
+    box-shadow: 0 0 0 2px whitesmoke;
+  }
+  #close:hover {
+    background: whitesmoke;
+  }
+  #close:before, #close:after {
+    position: absolute;
+    top: 15%;
+    left: calc(50% - .0625em);
+    width: 0.125em;
+    height: 70%;
+    border-radius: 0.125em;
+    transform: rotate(45deg);
+    background: currentcolor;
+    content: "";
+  }
+  #close:after {
+    transform: rotate(-45deg);
+  }
+
+  
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+.invoice-card {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 10px 2em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 32em;
+  width: 22em;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  /* box-shadow: 0px 10px 30px 20px rgba(0, 0, 0, 0.15); */
+}
+
+.invoice-card > div {
+  margin-top: 15px;
+  padding-top:15px;
+
+}
+
+.invoice-title {
+  flex: 3;
+}
+#qauntity{
+padding-left: 13%;  
+}
+
+.invoice-title #date {
+  display: block;
+  margin: 8px 0;
+  font-size: 12px;
+}
+
+.invoice-title #main-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.invoice-title #main-title h2 {
+  letter-spacing: 2.0px;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+}
+
+.invoice-title #main-title h4 {
+
+  font-weight: lighter;
+  font-size:15px;
+}
+
+.invoice-title span {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.invoice-details {
+  flex: 1;
+  border-top: 2px dashed grey;
+  border-bottom: 2px dashed grey;
+  display: flex;
+  align-items: center;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-table thead tr td {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: grey;
+  padding: 8px 0;
+}
+
+.invoice-table thead tr td:nth-last-child(1),
+.row-data td:nth-last-child(1),
+.calc-row td:nth-last-child(1)
+{
+  text-align: right;
+}
+
+.invoice-table tbody tr td {
+    padding: 8px 0;
+    letter-spacing: 0;
+}
+
+.invoice-table .row-data #unit {
+  text-align: center;
+}
+
+.invoice-table .row-data span {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.invoice-footer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0px;
+  padding: 15px;
+}
+
+
+
+.btn3 {
+  border-radius: 10px;
+  border: .5px solid black;
+  padding: 5px 5px;
+  background: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.btn3:hover{
+  background-color: white;
+
+}
+
+.btn3.btn-primary {
+  color: Solid black
+}
+
+.btn3#later {
+  margin-right: 2em;
+}
+

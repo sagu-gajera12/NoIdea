@@ -1,0 +1,18 @@
+.navbar1 {
+    height: 50px;
+    display: flex;
+    background-color: transparent; 
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    font-size: 1rem; 
+}
+
+a{
+    color: black;
+}
+.navlink{
+    color: white !important;
+    margin: 10px 20px;
+}

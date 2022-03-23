@@ -1,0 +1,149 @@
+.home {
+    width: 100%;
+  }
+  
+  .hero-main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease 1s;
+  }
+  
+  .hero img {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(1) invert(1);
+    width: 50px;
+    height: auto;
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+  .hero-01 {
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("https://www.soutickets.in/assets/images/banner_home_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .hero-02 {
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("https://barodamuseum.com/public/uploads/slider1-6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: blue; */
+  }
+  .hero-03 {
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/53/f4/8e/beutiful-place.jpg?w=1400&h=-1&s=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+  }
+
+  .hero-04 {
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("https://www.gujarattourism.com/content/dam/gujrattourism/images/museums/kutch-museum/Kutch-Museum-Banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+  }
+
+  .hero-05 {
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("https://www.gujarattourism.com/content/dam/gujrattourism/images/heritage-sites/laxmi-vilas-palace/Laxmi-Vilas-Palace2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+  }
+
+  
+  .heading-hero {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    /* border-bottom: 1px solid white; */
+    letter-spacing: 3px;
+    width: 60%;
+    text-align: center;
+  }
+  .subheading-hero {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: 1rem;
+  }
+  
+  .btn-hero {
+    color: white;
+    margin-top: 2rem;
+    border: 1px solid white;
+    background: none;
+    width: 13rem;
+    height: 4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .projects {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 10rem;
+    justify-content: space-between;
+  }
+  
+  .cover {
+    overflow: hidden;
+    width: 32%;
+    height: 400px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .indi {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.51s ease;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+  }
+  
+  
+  .scroll {
+    height: 10rem;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif !important;
+  }
+  a:hover {
+    text-decoration: none;
+  }
